@@ -3,8 +3,20 @@ export class Funcionario{
         this._nome =  nome
         this._salario = salario
         this._cpf = cpf
+
+        this._bonificacao = 1
+        this._senha;
     }
 
+    //métodos
+    cadastrarsenha(senha){
+        this._senha = senha
+    }
+
+    autenticar(senha){
+        return senha == this._senha;
+    }
+    
     //getters e setters
     get nome(){
         return this._nome
@@ -17,4 +29,5 @@ export class Funcionario{
     get cpf(){
         return this._cpf
     }
+
 }
